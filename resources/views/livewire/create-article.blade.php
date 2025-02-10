@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center align-items-center">
             <div class="col-12">
-                <form class="" wire:submit="store">
+                <form class="" wire:submit.prevent="store" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="title" class="form-label">Titolo*</label>
                         <input wire:model.blur="title" type="text" class="form-control" id="title"
@@ -26,6 +26,11 @@
                         <div>
                             @error('body') <span class="error">{{ $message }}</span> @enderror
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="img">Carica Immagine</label>
+                        <input type="file" id="img" wire:model="img" class="form-control">
+                        @error('img') <span class="text-danger">{{ $message }}</span> @enderror
                     </div>
                     <button type="submit" class="btn btn-primary">Crea</button>
                 </form>
