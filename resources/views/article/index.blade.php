@@ -7,9 +7,9 @@
         </div>
     </div>
 
-    <div class="container-fluid d-flex justify-content-center align-items-center">
-        <div class="row">
-            <div class="col-12 col-md-4">
+    <div class="">
+        <div class="">
+            <div class="">
                 <livewire:card-article />
             </div>
         </div>

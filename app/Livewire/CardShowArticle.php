@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class CardShowArticle extends Component
 {
-    // public $article;
+    public $article;
 
     public function render()
     {

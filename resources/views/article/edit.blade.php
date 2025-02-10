@@ -1,3 +1,3 @@
 <x-layout>
-    <livewire:edit-article :article="$article" />
+    <livewire:edit-article :article=$article />
 </x-layout>

@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use Livewire\Attributes\Validate;
 
 class EditArticle extends Component
 {
@@ -14,6 +15,8 @@ class EditArticle extends Component
     #[Validate('required')]
     public $body;
 
+    public $article;
+
     public function updateArticle()
     {
         $this->validate();
@@ -23,6 +26,9 @@ class EditArticle extends Component
             'subtitle' => $this->subtitle,
             'body' => $this->body
         ]);
+
+        session()->flash('message', 'Articolo aggiornato con successo.');
+
     }
 
     public function mount(){

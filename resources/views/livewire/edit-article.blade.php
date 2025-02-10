@@ -28,7 +28,7 @@
                                 @error('title') <span class="error">{{ $message }}</span> @enderror
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Crea</button>
+                        <button type="submit" class="btn btn-primary">Modifica</button>
                     </form>
                     @if (session('message'))
                         <div class="alert alert-success">

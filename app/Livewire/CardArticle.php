@@ -12,4 +12,11 @@ class CardArticle extends Component
         $articles = Article::all();
         return view('livewire.card-article', compact('articles'));
     }
+
+    public function destroy(Article $article)
+    {
+        $article->delete();
+
+        session()->flash('message', 'Articolo eliminato con successo.');
+    }
 }
